@@ -10,7 +10,7 @@
 }
 
 html {
-    overflow: hidden;
+    overflow: visible;
 }
 
 body {
@@ -100,4 +100,49 @@ body {
 
 .main-container .image-preview:hover video {
     display: block;
+}
+
+
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        min-height: auto;
+        height: auto;
+    }
+
+    .main-container .image-preview {
+        flex: unset;
+        height: 80vh;
+    }
+
+    .main-container .image-preview .overlay {
+        height: 40%;
+    }
+
+    .main-container .image-preview:hover {
+        flex: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .main-container .image-preview {
+        height: 60vh;
+    }
+
+    .main-container .image-preview .overlay {
+        height: 40%;
+    }
+
+    .main-container .image-preview .overlay .desc {
+        padding: 0.5rem;
+    }
+
+    .main-container .image-preview .overlay .desc h1 {
+        font-size: 1.5rem;
+    }
 }
